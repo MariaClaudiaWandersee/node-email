@@ -92,7 +92,6 @@ const showDeleteModal = (user) => {
   })
 }
 
-
 // Buscar usuários
 const fetchUsers = async () => {
   loading.value = true
@@ -116,7 +115,7 @@ const columns = [
   {
     title: 'Name',
     key: 'name',
-    customRender: ({ record }) => `${record.firstName || record.username}`,
+    customRender: ({ record }) => `${record.firstName + ' ' + record.lastName}`,
   },
   {
     title: 'Email',
